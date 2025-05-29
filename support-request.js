@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
   
       try {
-        const res = await fetch("http://localhost:5000/api/support", {
+        const res = await fetch("https://dern-backend.onrender.com/api/support", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
