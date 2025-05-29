@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request Support | Dern-Support</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="./support-request.js" defer></script>
+<p id="support-message" class="text-muted"></p>
+
+</head>
+<body class="dark-theme">
+    <div id="navbar-container"></div>
+
+    <script>
+      fetch("layout/layout.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+    </script>
+
+  <div class="form-section">
+    <div class="form-box">
+      <h2>Submit a Support Request</h2>
+      <form>
+        <label for="device">Device Type</label>
+        <input type="text" id="device" placeholder="e.g., Laptop, Server..." required />
+
+        <label for="issue">Describe the Issue</label>
+        <textarea id="issue" rows="4" placeholder="Explain the issue here..." required></textarea>
+
+        <label for="urgency">Urgency</label>
+        <select id="urgency" required>
+          <option value="">-- Select urgency --</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <button type="submit" class="btn primary full-width">Submit Request</button>
+      </form>
+    </div>
+  </div>
+ 
+</body>
+</html>

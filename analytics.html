@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics | Dern-Support</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="dark-theme">
+
+  <div id="navbar-container"></div>
+
+<script>
+  fetch("layout/layout.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
+
+  <section class="analytics-section">
+    <h2>System Analytics</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h4>Most Common Issue</h4>
+        <p>Hard Drive Failure</p>
+      </div>
+      <div class="stat-card">
+        <h4>Average Response Time</h4>
+        <p>2.3 Hours</p>
+      </div>
+      <div class="stat-card">
+        <h4>Total Requests</h4>
+        <p>1245</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

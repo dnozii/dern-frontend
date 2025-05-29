@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schedule & Quote | Dern-Support</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="./schedule-quote.js" defer></script>
+<p id="quote-message" class="text-muted"></p>
+
+</head>
+<body class="dark-theme">
+
+  <div class="form-section">
+    <div class="form-box">
+      <h2>Schedule a Service & Get a Quote</h2>
+      <form>
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" required />
+
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" required />
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" rows="3" placeholder="Add any specific info..."></textarea>
+
+        <button type="submit" class="btn primary full-width">Request Quote</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

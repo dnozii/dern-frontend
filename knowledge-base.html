@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Knowledge Base | Dern-Support</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="dark-theme">
+    <div id="navbar-container"></div>
+
+    <script>
+      fetch("layout/layout.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+    </script>
+
+  <section class="kb-section">
+    <h2 class="text-center">Knowledge Base</h2>
+    <div class="kb-grid">
+      <article class="kb-card">
+        <h3>Diagnosing Startup Issues</h3>
+        <p>Check power supply, cables, and BIOS. Try safe boot or external recovery drives.</p>
+      </article>
+      <article class="kb-card">
+        <h3>Fixing Slow Computers</h3>
+        <p>Remove unused apps, disable background tasks, upgrade RAM or SSD.</p>
+      </article>
+      <article class="kb-card">
+        <h3>Network Connection Problems</h3>
+        <p>Restart router, update network drivers, reset TCP/IP stack.</p>
+      </article>
+    </div>
+  </section>
+  
+  
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spare Parts | Dern-Support</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="dark-theme">
+  <div id="navbar-container"></div>
+
+<script>
+  fetch("layout/layout.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
+
+
+  <section class="parts-section">
+    <h2>Spare Parts Inventory</h2>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>8GB RAM</td><td>5</td><td>$30</td><td>Low Stock</td></tr>
+        <tr><td>512GB SSD</td><td>12</td><td>$70</td><td>In Stock</td></tr>
+      </tbody>
+    </table>
+  </section>
+ 
+  
+</body>
+</html>

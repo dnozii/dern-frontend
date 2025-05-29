@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Dern-Support</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="./register.js" defer></script>
+<p id="register-message" class="text-muted"></p>
+
+</head>
+<body class="dark-theme">
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <h2>Create Your Account</h2>
+      <form>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Choose a password" required />
+
+        <label for="role">Select Role</label>
+        <select id="role" required>
+          <option value="">-- Choose your profile --</option>
+          <option value="individual">Individual</option>
+          <option value="business">Business</option>
+        </select>
+
+        <button type="submit" class="btn primary full-width">Register</button>
+      </form>
+      <p class="text-muted">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+  <div id="navbar-container"></div>
+
+  <script>
+    fetch("layout/layout.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+  
+</body>
+</html>

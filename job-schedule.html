@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Schedule | Dern-Support</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="dark-theme">
+
+  <div id="navbar-container"></div>
+
+<script>
+  fetch("layout/layout.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+</script>
+
+  <section class="schedule-section">
+    <h2>Technician Job Schedule</h2>
+    <ul class="job-list">
+      <li><strong>10:00 AM</strong> — Install SSD for Client X</li>
+      <li><strong>12:00 PM</strong> — Power supply repair for Client Y</li>
+      <li><strong>3:00 PM</strong> — Network diagnostics at Client Z</li>
+    </ul>
+  </section>
+ 
+  
+</body>
+</html>
