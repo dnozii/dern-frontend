@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       try {
         const res = await fetch("https://dern-backend.onrender.com/api/users/login", {
-          method: "POST",
+              method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password })
         });
